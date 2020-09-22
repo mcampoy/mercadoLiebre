@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/head", {title: "todos los productos"})  %>
+</head>
+<body>
+    <%- include("partials/headerNavbar")  %> 
+
+    <div class="container">
+        <form  class="m-5" action="/auth/register" method="POST" enctype="multipart/form-data">
+            <!-- nombre -->
+            <div class="form-group">
+                <label for="nombre"><h2>Nombre</h2></label>
+                <input  type="text" class="form-input" name="firstname" id="firstname" placeholder="" required>
+            </div>
+            <!-- apellido -->
+            <div class="form-group">
+                <label for="apellido"> <h2>Apellido</h2></label>
+                <input class="form-input" type="text" name="lastname" id="lastname" required>
+            </div>
+            <!-- email -->
+            <div class="form-group">
+                <label for="email"> <h2>Email</h2></label>
+                <input class="form-input" type="email" name="email" id="email" required>
+            </div>
+            <!-- contraseña -->
+            <div class="form-group">
+                <label for="contraseña"> <h2>Contraseña</h2></label>
+                <input class="form-input" type="password" name="password" id="password" required>
+            </div>
+            <!-- verificacion -->
+            <div class="form-group">
+                <label for="password2"><h2>Repita Contraseña</h2></label>
+                <input class="form-input" type="password" name="password2" id="password2" required>
+            </div>
+            <!-- avatar -->
+            <div class="custom-file">
+                <label for="avatar"><h2>Elija una imagen de perfil</h2></label>
+                <input type="file" class="custom-file-input" name="avatar" id="avatar">
+            </div> <br><br>
+
+            <button class="btn" type="submit">Registrarse</button>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Include Head -->
+<%- include("partials/head", {title: user.firstname}) %>
+
+<body>
+    <!-- Header -->
+    <%- include("partials/headerNavbar") %>
+    <!-- /Header -->
+
+    <!-- product detail -->
+    <div class="container products-wrapper">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="products-title">¡Bienvenida/o: <%= user.firstname %>! </h2>
+            </div>
+        </div>
+        <div class="product-detail">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <img src="/images/avatars/<%= user.avatar %>" alt="user image" class="product-detail-img" style="width: 80px; height: 80px">
+                    <p class="product-detail-description">
+                    </p>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <article class="product-detail-info">
+                        <h2 class="product-detail-title"><%= user.firstname %> <%= user.lastname %></h2>
+                        
+                     
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /product detail -->
+
+    <!-- footer -->
+    <%- include("partials/footer") %>
+    <!-- /footer -->
+
+</body>
+
+</html>

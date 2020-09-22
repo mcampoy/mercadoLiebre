@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/head", {title: "todos los productos"})  %>
+</head>
+<body>
+    <%- include("partials/headerNavbar")  %> 
+
+    <div class="container">
+        <form  class="m-5" action="/auth/login" method="POST">
+            
+            <!-- email -->
+            <div class="form-group">
+                <label for="email"> <h2>Email</h2></label>
+                <input class="form-input" type="email" name="email" id="email" required>
+            </div>
+            <!-- contraseña -->
+            <div class="form-group">
+                <label for="contraseña"> <h2>Contraseña</h2></label>
+                <input class="form-input" type="password" name="password" id="password" required>
+            </div>
+            <br> 
+            <br> 
+            <button class="btn" type="submit">Ingresar</button>
+        </form>
+    </div>
+
+</body>
+</html>
